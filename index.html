@@ -14,54 +14,61 @@
 
 <body>
   <div class="container">
-    <div class="site-header">
+    <ul class="skip-links">
+      <li><a role="button" href="#owner">Skip to Meet the owner</a></li>
+      <li><a role="button" href="#address">Skip to Address</a></li>
+      <li><a role="button" href="#contact-section">Skip to Contact Us</a></li>
+    </ul>
+    <header role="banner" class="site-header" id="top" itemscope itemtype="https://schema.org/Product">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <nav class="main-nav" role="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
+          <li><a role="button" href="#">Home</a></li>
+          <li><a role="button" href="#">Products</a></li>
+          <li><a role="button" href="#">Reservation</a></li>
+          <li><a role="button" href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
+      </nav>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="kitten's picture" role="img" aria-label="kitten's picture" itemprop="image">
+    </header>
+    <main role="main" class="main-content">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
+      <div class="owner" id="owner" itemscope itemtype="https://schema.org/Person">
         <h1>Meet the owner</h1>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: <abbr title="Chief Executive Officer">CEO</abbr></li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
           <li>Phone: 613-000-0000</li>
         </ul>
+      </div>
+      <div id="address" itemscope itemtype="https://schema.org/Person">
         <h1>Address</h1>
-        <p>
-          Jambox Studios
+        <address itemprop="address">Jambox Studios
           123 Guitar Road,
           Musicville, Danceistan
-          B3T 0L0
-        </p>
+          B3T 0L0</address>
       </div>
-      <div class="contact-section">
+      <div class="contact-section" id="contact-section">
         <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+        <form role="form" action="thanks.html">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" placeholder="Full Name" name="fullname" role="textbox">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Email" name="email" role="textbox">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Subject" name="subject" role="textbox">
+          <label for="message"><b>Your Message</b></label>
+          <textarea id="message" name="message" role="textbox"></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
+    </main>
+    <footer role="contentinfo" class="site-footer">
+      &copy; 2021 Jam Box Studios  <a role="button" href="#top">Back to Top</a>
+    </footer>
   </div>
 </body>
 
